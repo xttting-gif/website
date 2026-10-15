@@ -1,0 +1,394 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f6;transition:background-color 0.3s ease,color 0.3s ease;}.dark,html.dark body{background-color:#15100e;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script>
+  // 即時偵測深淺色偏好，避免畫面閃爍
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-container": "#40c2fd", "on-secondary-fixed": "#001e2c", "surface-container-low": "#fff1ec", "on-primary-container": "#613b00", "tertiary-container": "#ff8bc5", "tertiary": "#a43073", "on-tertiary-fixed-variant": "#85145a", "inverse-surface": "#362f2c", "surface": "#fff8f6", "outline-variant": "#d8c3ad", "surface-container-high": "#f3e5e0", "on-primary": "#ffffff", "secondary-fixed": "#c4e7ff", "on-secondary-fixed-variant": "#004c69", "on-surface": "#211a17", "on-primary-fixed-variant": "#653e00", "primary-container": "#f59e0b", "error": "#ba1a1a", "on-secondary-container": "#004d6a", "surface-bright": "#fff8f6", "secondary-fixed-dim": "#7bd0ff", "primary-fixed-dim": "#ffb95f", "primary": "#855300", "on-error-container": "#93000a", "tertiary-fixed": "#ffd8e7", "secondary": "#00668a", "outline": "#867461", "surface-dim": "#e5d7d2", "error-container": "#ffdad6", "surface-container-highest": "#ede0db", "inverse-primary": "#ffb95f", "on-error": "#ffffff", "on-tertiary": "#ffffff", "surface-tint": "#855300", "on-tertiary-container": "#810f56", "surface-variant": "#ede0db", "tertiary-fixed-dim": "#ffafd3", "primary-fixed": "#ffddb8", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#2a1700", "on-tertiary-fixed": "#3d0026", "on-background": "#211a17", "on-surface-variant": "#534434", "surface-container": "#f9ebe6", "background": "#fff8f6", "inverse-on-surface": "#fceee9", "on-secondary": "#ffffff" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "margin": "2rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.25rem", "space-lg": "1.5rem", "space-xl": "2.25rem" }, "fontFamily": { "body-md": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "headline-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-lg": ["Nunito Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "display-hero-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-lg": ["17px", { "lineHeight": "26px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface dark:bg-[#15100e] font-body-md text-on-surface dark:text-[#f3e5e0] flex flex-col min-h-screen transition-colors duration-300"><main class="flex flex-col relative w-full bg-surface dark:bg-[#15100e] min-h-screen transition-colors duration-300"><div class="absolute inset-0 pointer-events-none overflow-hidden select-none z-0"><!-- Sun Doodle (Top-Right) --><svg class="absolute -top-3 sm:top-2 right-1 sm:right-6 md:right-14 lg:right-28 w-32 h-32 sm:w-40 sm:h-40 pointer-events-none select-none dark:opacity-75 transition-opacity" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="80" cy="80" r="32" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 0" fill="none"></circle><path d="M80 30 L80 14" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M80 130 L80 146" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M30 80 L14 80" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M130 80 L146 80" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M45 45 L34 34" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M115 115 L126 126" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M115 45 L126 34" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path><path d="M45 115 L34 126" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"></path></svg><!-- Middle-Left Wavy Doodle Lines --><svg class="absolute top-[42%] sm:top-[40%] -left-6 sm:left-2 md:left-8 lg:left-20 w-36 h-32 sm:w-44 sm:h-36 pointer-events-none select-none opacity-90 dark:opacity-30 transition-opacity" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 52 C26 24, 52 34, 74 48 C96 62, 122 32, 146 46" stroke="#3b82f6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 92 C26 68, 44 70, 60 88 C74 104, 88 108, 106 86 C120 68, 136 78, 150 90" stroke="#3b82f6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><!-- Middle-Right Wavy Doodle Lines --><svg class="absolute top-[52%] sm:top-[50%] -right-6 sm:right-2 md:right-8 lg:right-20 w-36 h-32 sm:w-44 sm:h-36 pointer-events-none select-none opacity-90 dark:opacity-30 transition-opacity" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 46 C36 32, 62 62, 84 48 C106 34, 132 24, 150 52" stroke="#3b82f6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 86 C24 74, 40 64, 54 82 C72 104, 86 100, 100 84 C116 66, 134 68, 154 92" stroke="#3b82f6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><!-- Soft Faint Atmospheric Cloud / Pastel Accents --><div class="absolute top-20 -left-12 w-48 h-48 bg-primary-container/10 dark:bg-primary-container/5 rounded-full blur-3xl pointer-events-none"></div><div class="absolute top-1/2 -right-16 w-56 h-56 bg-secondary-fixed/30 dark:bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none"></div></div><div class="flex flex-col w-full px-margin-mobile py-space-sm max-w-xl mx-auto">
+<!-- Interactive Top Bar: Theme Toggle & Greeting Sticker -->
+<div class="flex items-center justify-between px-space-xs mb-space-sm gap-2">
+<!-- Theme Toggle Button -->
+<button id="theme-toggle" type="button" aria-label="切換深淺模式" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high dark:bg-[#281e19] text-on-surface dark:text-[#f3e5e0] rounded-full shadow-[2px_2px_0px_#d8c3ad] dark:shadow-[2px_2px_0px_#423026] active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer border border-outline-variant/30 dark:border-[#3d2e26] hover:scale-105 select-none">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="material-symbols-outlined text-sm text-primary dark:text-[#ffb95f]" id="theme-icon">light_mode</span>
+<span class="font-label-sm text-label-sm font-bold" id="theme-text">淺色模式</span>
+</button>
+<div class="inline-flex items-center gap-1 text-tertiary dark:text-[#ffd8e7] font-label-sm text-label-sm font-bold bg-tertiary-fixed/60 dark:bg-[#4a1332]/70 px-2.5 py-1.5 rounded-full border border-tertiary-fixed-dim/40 dark:border-transparent">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="">歡迎交流與探索！</span>
+</div>
+</div>
+<!-- Main Squircle Neo-Editorial Card Container -->
+<div class="w-full bg-surface-container-lowest dark:bg-[#201814] rounded-[32px] shadow-[0_16px_36px_-8px_rgba(245,158,11,0.22),0_6px_16px_rgba(43,33,29,0.06)] dark:shadow-[0_16px_36px_-8px_rgba(0,0,0,0.6),0_6px_20px_rgba(0,0,0,0.4)] border border-transparent dark:border-[#382b24] p-space-md sm:p-space-lg flex flex-col gap-space-lg relative overflow-hidden transition-all duration-300">
+<!-- Decorative Floating Header Confetti -->
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-primary-container/20 dark:bg-primary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="absolute top-1/3 -left-8 w-28 h-28 bg-secondary-fixed/40 dark:bg-secondary-fixed/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- 1. Profile Hero Identity Section -->
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-space-md relative z-10">
+<!-- Avatar with Squircle & Floating Doodle Badge -->
+<div class="relative shrink-0">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-[28px] overflow-hidden bg-surface-container-low dark:bg-[#2c201a] shadow-[4px_4px_0px_#fed7aa] dark:shadow-[4px_4px_0px_#6e3e00]">
+<img alt="理性沉靜、帶有知性氣質的台灣女大學生個人頭像" class="w-full h-full object-cover" src="./avatar.jpg">
+</div>
+<!-- Pinned Micro Sparkle Badge -->
+<div class="absolute -top-2 -right-2 bg-primary-container text-on-primary-container p-1.5 rounded-full shadow-[2px_2px_0px_#855300] dark:shadow-[2px_2px_0px_#382000] flex items-center justify-center transform hover:rotate-12 transition-transform duration-200">
+<span class="material-symbols-outlined text-base font-bold">draw</span>
+</div>
+<!-- Mini Heart Sticker -->
+<div class="absolute -bottom-2 -left-2 bg-tertiary-container text-on-tertiary-container p-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<!-- Identity Meta details -->
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left flex-1 min-w-0">
+<!-- Live Status Pill -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low dark:bg-[#2c201a] border border-transparent dark:border-[#3d2e26] shadow-sm mb-space-xs">
+<span class="text-xs">🧪</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#d8c3ad] font-bold">保持好奇心，獨立思考</span>
+</div>
+<div class="flex items-center gap-2 mt-1 flex-wrap justify-center sm:justify-start">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface dark:text-[#fff8f6] font-extrabold tracking-tight">徐湘庭</h1>
+<span class="text-xl">✨</span>
+</div>
+<p class="font-label-md text-label-md text-primary dark:text-[#ffb95f] font-bold mt-0.5">
+          國立中山大學 • 理學領域大學生
+        </p>
+<!-- Location & Handle -->
+<div class="flex items-center gap-2 mt-2 text-on-surface-variant dark:text-[#d8c3ad] font-body-sm text-body-sm flex-wrap justify-center sm:justify-start">
+<span class="inline-flex items-center gap-1 bg-surface-container dark:bg-[#2c201a] border border-transparent dark:border-[#3d2e26] px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-sm text-primary dark:text-[#ffb95f]">location_on</span>
+            台灣高雄 • 科學探究與發現
+          </span>
+<span class="inline-flex items-center gap-1 bg-surface-container dark:bg-[#2c201a] border border-transparent dark:border-[#3d2e26] px-2 py-0.5 rounded-full font-bold text-on-surface dark:text-[#fff8f6]">
+<span class="">@xttting-gif</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Action Bar: Mailto CTA & Quick Connect -->
+<div class="flex flex-col sm:flex-row gap-space-xs relative z-10">
+<a class="flex-1 flex items-center justify-center gap-2 py-2.5 px-space-md bg-primary-container text-on-primary-container dark:bg-[#f59e0b] dark:text-[#382000] font-headline-sm text-headline-sm rounded-full shadow-[3px_3px_0px_#613b00] dark:shadow-[3px_3px_0px_#291600] active:translate-x-0.5 active:translate-y-0.5 transition-all group" href="mailto:xxu3184@gmail.com?subject=%E4%BD%A0%E5%A5%BD%EF%BC%81%E6%83%B3%E8%88%87%E4%BD%A0%E4%BA%A4%E6%B5%81%E6%8E%A2%E7%B4%A2%E8%88%87%E5%90%88%E4%BD%9C%E6%83%B3%E6%B3%95">
+<span class="material-symbols-outlined text-lg group-hover:rotate-12 transition-transform">mail</span>
+<span class="font-label-lg text-label-lg">來信交流 • 打聲招呼</span>
+</a>
+<a class="flex items-center justify-center gap-1.5 py-2.5 px-4 bg-surface-container-high dark:bg-[#2e231d] text-on-surface dark:text-[#fff8f6] font-label-lg text-label-lg rounded-full shadow-[2px_2px_0px_#534434] dark:shadow-[2px_2px_0px_#18120e] border border-transparent dark:border-[#403128] active:translate-x-0.5 active:translate-y-0.5 transition-all" href="https://github.com/xttting-gif" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">code</span>
+<span class="font-label-sm text-label-sm font-bold">GitHub</span>
+</a>
+</div>
+<!-- 2. Bio & Playful Philosophy -->
+<div class="flex flex-col gap-space-sm relative z-10">
+<!-- Pastel Speech Bubble / Motto Quote -->
+<div class="relative bg-surface-container-low dark:bg-[#281e19] border border-transparent dark:border-[#382a22] p-3.5 rounded-2xl shadow-[3px_3px_0px_#fed7aa] dark:shadow-[3px_3px_0px_#5e3b08] flex items-start gap-2.5">
+<span class="text-xl leading-none select-none">💬</span>
+<div class="flex flex-col">
+<p class="font-title-md text-title-md text-on-surface dark:text-[#f8eee9] italic font-medium">
+            “保持好奇，獨立思考，讓每一次理解都成為探索世界的新起點。”
+          </p>
+<span class="font-label-sm text-label-sm text-primary dark:text-[#ffb95f] font-bold mt-1">— 湘庭的探索哲學</span>
+</div>
+</div>
+</div>
+<!-- Multi-Colored Pastel Skill Tag Cloud -->
+<div class="flex flex-col gap-2 relative z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bda99a] font-bold uppercase tracking-wider">熱情與專注領域</span>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed dark:bg-[#483008] dark:text-[#ffdcaa] font-label-md text-label-md font-bold shadow-sm hover:-rotate-2 transition-transform flex items-center gap-1">
+<span class="">🧪</span> #化學與科學探索
+        </span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed dark:bg-[#06374d] dark:text-[#c4e7ff] font-label-md text-label-md font-bold shadow-sm hover:rotate-2 transition-transform flex items-center gap-1">
+<span class="">🌍</span> #跨領域學習
+        </span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed dark:bg-[#4a1332] dark:text-[#ffd8e7] font-label-md text-label-md font-bold shadow-sm hover:-rotate-1 transition-transform flex items-center gap-1">
+<span class="">📚</span> #深度理解與知識整理
+        </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface dark:bg-[#342720] dark:text-[#f3e5e0] font-label-md text-label-md font-bold shadow-sm hover:rotate-2 transition-transform flex items-center gap-1">
+<span class="">🔬</span> #科學探究與實作
+        </span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed-dim/50 text-on-secondary-fixed dark:bg-[#0c4056] dark:text-[#b4e6ff] font-label-md text-label-md font-bold shadow-sm hover:-rotate-2 transition-transform flex items-center gap-1">
+<span class="">💡</span> #獨立思考與問題解決
+        </span>
+</div>
+</div>
+<!-- Clean Static External Links -->
+<div class="flex flex-col gap-2 relative z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bda99a] font-bold uppercase tracking-wider">社群與探索足跡</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<!-- Instagram Link -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container dark:bg-[#281e19] hover:bg-surface-container-high dark:hover:bg-[#332620] text-on-surface dark:text-[#fff8f6] shadow-sm border border-transparent dark:border-[#382b24] transition-all group" href="https://www.instagram.com/_xiangting_xu/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-8 h-8 rounded-full bg-tertiary-fixed dark:bg-[#501737] text-on-tertiary-fixed dark:text-[#ffd8e7] flex items-center justify-center font-bold text-sm shrink-0">
+<span class="material-symbols-outlined text-base">photo_camera</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface dark:text-[#fff8f6] truncate">Instagram</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant dark:text-[#bca897] truncate">日常生活與個人觀察 (@_xiangting_xu)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-base text-outline dark:text-[#bca897] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<!-- GitHub Link -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container dark:bg-[#281e19] hover:bg-surface-container-high dark:hover:bg-[#332620] text-on-surface dark:text-[#fff8f6] shadow-sm border border-transparent dark:border-[#382b24] transition-all group" href="https://github.com/xttting-gif" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-8 h-8 rounded-full bg-secondary-fixed dark:bg-[#003f57] text-on-secondary-fixed dark:text-[#c4e7ff] flex items-center justify-center font-bold text-sm shrink-0">
+<span class="material-symbols-outlined text-base">code</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface dark:text-[#fff8f6] truncate">GitHub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant dark:text-[#bca897] truncate">學習專案與探索紀錄 (@xttting-gif)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-base text-outline dark:text-[#bca897] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<!-- Handwritten Notes Link / Modal Trigger -->
+<button id="open-notes-btn" type="button" class="w-full text-left flex items-center justify-between p-3 rounded-2xl bg-surface-container dark:bg-[#281e19] hover:bg-surface-container-high dark:hover:bg-[#332620] text-on-surface dark:text-[#fff8f6] shadow-sm border border-transparent dark:border-[#382b24] transition-all group cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-8 h-8 rounded-full bg-primary-fixed dark:bg-[#4f3307] text-on-primary-fixed dark:text-[#ffddb8] flex items-center justify-center font-bold text-sm shrink-0">
+<span class="material-symbols-outlined text-base">edit_note</span>
+</span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface dark:text-[#fff8f6] truncate">手寫紙本筆記</span>
+<span class="text-xs px-1.5 py-0.2 rounded-full bg-primary-fixed/50 dark:bg-[#4f3307] text-primary dark:text-[#ffb95f] font-bold shrink-0">點擊看照片 📷</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant dark:text-[#bca897] truncate">習慣用紙筆梳理科學原理與思緒</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-base text-outline dark:text-[#bca897] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Selected Projects Link -->
+<a class="flex items-center justify-between p-3 rounded-2xl bg-secondary-fixed/50 dark:bg-[#0c3144] hover:bg-secondary-fixed dark:hover:bg-[#13425b] text-on-secondary-fixed dark:text-[#c4e7ff] shadow-sm border border-transparent dark:border-[#174862] transition-all group" href="#projects">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-8 h-8 rounded-full bg-secondary dark:bg-[#007ba6] text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface dark:text-[#fff8f6] truncate">精選成果與專案</span>
+<span class="font-body-sm text-body-sm text-on-secondary-fixed dark:text-[#9cd8fb] truncate">探究實作、科學簡報與跨領域想法</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-base text-secondary dark:text-[#7bd0ff] group-hover:translate-x-1 transition-transform">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Playful Wavy SVG Doodle Divider -->
+<div class="w-full flex items-center justify-center py-1 overflow-hidden opacity-40 dark:opacity-20">
+<svg class="w-full h-4 text-on-surface-variant dark:text-[#634e40]" fill="none" viewBox="0 0 400 16" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 8C20 2 40 14 60 8C80 2 100 14 120 8C140 2 160 14 180 8C200 2 220 14 240 8C260 2 280 14 300 8C320 2 340 14 360 8C380 2 400 14 420 8" stroke="currentColor" stroke-dasharray="4 6" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- 3. Bottom Section: 4 Pastel Metric Tiles (2x2 Grid) -->
+<div class="flex flex-col gap-space-xs relative z-10">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bda99a] font-bold uppercase tracking-wider">學習歷程 • 核心指標</span>
+<span class="text-xs">🌱</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Tile 1: 化學 × 物理 -->
+<div class="bg-surface-container-low dark:bg-[#281e19] border border-transparent dark:border-[#382b24] p-3.5 rounded-2xl shadow-[3px_3px_0px_#fed7aa] dark:shadow-[3px_3px_0px_#5c3700] flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-primary-fixed dark:bg-[#4f3307] flex items-center justify-center text-on-primary-fixed dark:text-[#ffdcaa]">
+<span class="material-symbols-outlined text-sm">science</span>
+</span>
+<span class="text-xs font-bold text-primary dark:text-[#ffb95f] bg-primary-fixed/40 dark:bg-[#4d3205]/60 px-1.5 py-0.5 rounded-full">科學</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface dark:text-[#fff8f6] font-extrabold tracking-tight">化學 × 物理</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bca897] font-bold leading-tight">探索化學與物理的核心原理</p>
+</div>
+</div>
+<!-- Tile 2: 探究實驗 -->
+<div class="bg-surface-container-high dark:bg-[#2e231d] border border-transparent dark:border-[#3d2e26] p-3.5 rounded-2xl shadow-[3px_3px_0px_#f59e0b] dark:shadow-[3px_3px_0px_#593800] flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-sm">biotech</span>
+</span>
+<span class="text-xs font-bold text-on-primary-container dark:text-[#ffc166] bg-primary-container/30 dark:bg-[#523300]/60 px-1.5 py-0.5 rounded-full">實作</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface dark:text-[#fff8f6] font-extrabold tracking-tight">探究實驗</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bca897] font-bold leading-tight">重視實作驗證與實驗精神</p>
+</div>
+</div>
+<!-- Tile 3: 深入探究 -->
+<div class="bg-secondary-fixed/40 dark:bg-[#122834] border border-transparent dark:border-[#1b3d4f] p-3.5 rounded-2xl shadow-[3px_3px_0px_#7bd0ff] dark:shadow-[3px_3px_0px_#004766] flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-secondary-fixed dark:bg-[#003f57] flex items-center justify-center text-on-secondary-fixed dark:text-[#c4e7ff]">
+<span class="material-symbols-outlined text-sm">psychology</span>
+</span>
+<span class="text-xs font-bold text-secondary dark:text-[#7bd0ff] bg-secondary-fixed/60 dark:bg-[#00425c]/60 px-1.5 py-0.5 rounded-full">思維</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface dark:text-[#fff8f6] font-extrabold tracking-tight">深入探究</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bca897] font-bold leading-tight">重視原理理解、邏輯與知識連結</p>
+</div>
+</div>
+<!-- Tile 4: 持續前行 -->
+<div class="bg-tertiary-fixed/40 dark:bg-[#341827] border border-transparent dark:border-[#4c2138] p-3.5 rounded-2xl shadow-[3px_3px_0px_#ffafd3] dark:shadow-[3px_3px_0px_#631644] flex flex-col justify-between transition-transform hover:-translate-y-0.5">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 rounded-full bg-tertiary-fixed dark:bg-[#501737] flex items-center justify-center text-on-tertiary-fixed dark:text-[#ffd8e7]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</span>
+<span class="text-xs font-bold text-tertiary dark:text-[#ffafd3] bg-tertiary-fixed/60 dark:bg-[#59143d]/60 px-1.5 py-0.5 rounded-full">成長</span>
+</div>
+<div class="mt-2">
+<span class="font-headline-md text-headline-md text-on-surface dark:text-[#fff8f6] font-extrabold tracking-tight">持續前行</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bca897] font-bold leading-tight">保持好奇心、持續探索新的可能</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm flex justify-center items-center gap-2"></div>
+</div>
+<!-- Handwritten Notes Lightbox Modal -->
+<div id="notes-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+  <div class="bg-surface-container-lowest dark:bg-[#201814] rounded-3xl p-5 sm:p-6 max-w-lg w-full shadow-2xl border border-outline-variant/30 dark:border-[#382b24] transform scale-95 transition-transform duration-300 flex flex-col gap-4 relative">
+    
+    <!-- Modal Header -->
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="w-8 h-8 rounded-full bg-primary-fixed dark:bg-[#4f3307] text-on-primary-fixed dark:text-[#ffddb8] flex items-center justify-center font-bold text-sm shrink-0">
+          <span class="material-symbols-outlined text-base">edit_note</span>
+        </span>
+        <div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface dark:text-[#fff8f6] font-extrabold">湘庭的手寫筆記</h3>
+          <p class="font-label-sm text-label-sm text-on-surface-variant dark:text-[#bca897]">紙本演算與科學思維推導紀錄</p>
+        </div>
+      </div>
+      <button id="close-notes-btn" type="button" aria-label="關閉預覽" class="w-8 h-8 rounded-full bg-surface-container-high dark:bg-[#2c201a] text-on-surface dark:text-[#fff8f6] flex items-center justify-center hover:scale-110 active:scale-95 transition-all cursor-pointer">
+        <span class="material-symbols-outlined text-base">close</span>
+      </button>
+    </div>
+
+    <!-- Image Display Area -->
+    <div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-low dark:bg-[#281e19] border border-outline-variant/20 dark:border-[#382b24] min-h-[260px] max-h-[60vh] flex items-center justify-center group">
+      <img id="notes-img" src="./notes.jpg" alt="湘庭的手寫紙本筆記照片" class="w-full h-full object-contain max-h-[58vh] rounded-2xl" onerror="this.classList.add('hidden'); document.getElementById('notes-fallback').classList.remove('hidden');" onload="this.classList.remove('hidden'); document.getElementById('notes-fallback').classList.add('hidden');">
+      
+      <!-- Fallback when notes.jpg doesn't exist yet -->
+      <div id="notes-fallback" class="hidden flex flex-col items-center justify-center p-6 text-center text-on-surface-variant dark:text-[#bca897] gap-2">
+        <span class="material-symbols-outlined text-4xl text-primary dark:text-[#ffb95f]">note_alt</span>
+        <p class="font-label-lg text-label-lg font-bold text-on-surface dark:text-[#fff8f6]">尚未放入筆記照片</p>
+        <p class="font-body-sm text-body-sm max-w-xs">將手寫筆記照片命名為 <code class="px-1.5 py-0.5 rounded bg-primary-fixed/40 dark:bg-[#4f3307] text-primary dark:text-[#ffb95f] font-mono text-xs">notes.jpg</code> 放入專案資料夾，或點擊下方直接選擇照片即時預覽！</p>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+      <div class="flex items-center gap-3">
+        <!-- Local upload trigger -->
+        <label class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full bg-surface-container-high dark:bg-[#2e231d] text-on-surface dark:text-[#fff8f6] hover:bg-surface-container dark:hover:bg-[#382b24] cursor-pointer transition-all border border-outline-variant/30 dark:border-[#403128]">
+          <span class="material-symbols-outlined text-sm text-primary dark:text-[#ffb95f]">upload</span>
+          <span>選擇照片即時預覽</span>
+          <input type="file" id="notes-file-input" accept="image/*" class="hidden">
+        </label>
+        <a id="notes-open-link" href="./notes.jpg" target="_blank" class="inline-flex items-center gap-1 text-primary dark:text-[#ffb95f] font-label-sm text-label-sm font-bold hover:underline">
+          <span class="material-symbols-outlined text-sm">open_in_new</span>
+          開啟原圖
+        </a>
+      </div>
+      <button id="close-notes-btn-bottom" type="button" class="px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm hover:scale-105 active:scale-95 transition-all cursor-pointer">
+        關閉
+      </button>
+    </div>
+
+  </div>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const toggleIcon = document.getElementById('theme-icon');
+    const toggleText = document.getElementById('theme-text');
+
+    function updateThemeUI(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        if (toggleIcon) toggleIcon.textContent = 'dark_mode';
+        if (toggleText) toggleText.textContent = '深色模式';
+      } else {
+        document.documentElement.classList.remove('dark');
+        if (toggleIcon) toggleIcon.textContent = 'light_mode';
+        if (toggleText) toggleText.textContent = '淺色模式';
+      }
+    }
+
+    // 初始化狀態
+    const isCurrentlyDark = document.documentElement.classList.contains('dark');
+    updateThemeUI(isCurrentlyDark);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const nextDark = !isDark;
+        localStorage.setItem('theme', nextDark ? 'dark' : 'light');
+        updateThemeUI(nextDark);
+      });
+    }
+
+    // 手寫筆記燈箱彈窗邏輯
+    const notesModal = document.getElementById('notes-modal');
+    const openNotesBtn = document.getElementById('open-notes-btn');
+    const closeNotesBtn = document.getElementById('close-notes-btn');
+    const closeNotesBtnBottom = document.getElementById('close-notes-btn-bottom');
+    const notesImg = document.getElementById('notes-img');
+    const notesFallback = document.getElementById('notes-fallback');
+    const notesFileInput = document.getElementById('notes-file-input');
+    const notesOpenLink = document.getElementById('notes-open-link');
+
+    function openNotes() {
+      if (!notesModal) return;
+      notesModal.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        notesModal.classList.remove('opacity-0');
+        const dialog = notesModal.querySelector('div');
+        if (dialog) dialog.classList.remove('scale-95');
+      });
+    }
+
+    function closeNotes() {
+      if (!notesModal) return;
+      notesModal.classList.add('opacity-0');
+      const dialog = notesModal.querySelector('div');
+      if (dialog) dialog.classList.add('scale-95');
+      setTimeout(() => {
+        notesModal.classList.add('hidden');
+      }, 300);
+    }
+
+    if (openNotesBtn) openNotesBtn.addEventListener('click', openNotes);
+    if (closeNotesBtn) closeNotesBtn.addEventListener('click', closeNotes);
+    if (closeNotesBtnBottom) closeNotesBtnBottom.addEventListener('click', closeNotes);
+
+    if (notesModal) {
+      notesModal.addEventListener('click', function(e) {
+        if (e.target === notesModal) closeNotes();
+      });
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && notesModal && !notesModal.classList.contains('hidden')) {
+        closeNotes();
+      }
+    });
+
+    // 支援本地上傳即時預覽
+    if (notesFileInput) {
+      notesFileInput.addEventListener('change', function(e) {
+        const file = e.target.files && e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(evt) {
+            if (notesImg) {
+              notesImg.src = evt.target.result;
+              notesImg.classList.remove('hidden');
+            }
+            if (notesFallback) notesFallback.classList.add('hidden');
+            if (notesOpenLink) notesOpenLink.href = evt.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+    }
+  })();
+</script></main></body></html>
